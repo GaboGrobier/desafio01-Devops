@@ -19,14 +19,10 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
-      
-  construir:
-    runs-on: ubuntu-latest
-    needs: Build
-    steps:
       - name: Build and push Docker images
         uses: docker/build-push-action@v6.10.0
         with:
           context: ./repo
           push: true
           tags: gabogrobier/desafio-1:1.0.0
+  
