@@ -22,7 +22,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./repo
+          context: ../repo
           push: true
           tags: gabogrobier/desafio-1:1.0.0
 
